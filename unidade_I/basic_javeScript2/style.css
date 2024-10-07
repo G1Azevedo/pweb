@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+div#conatiner_meuAmor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.cerveja{
+    margin-bottom: 7px;
+    background-color: black;
+    color: aqua;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.bloco{
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.button_bloco{
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    background-color: blueviolet;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 3px 3px 2px black;
+}
+
+div#container-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#container-conteudo{
+    margin-top: 100px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(176, 242, 255);
+    box-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+}
