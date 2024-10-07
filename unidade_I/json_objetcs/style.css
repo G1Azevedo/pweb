@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+table{
+    width: 500px;
+    border-collapse: collapse;
+}
+
+tr, td{
+    width: 50%;
+    border: 1px solid black;
+    padding: 7px;
+    text-align: center;
+}
+
+th{
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(49, 41, 204);
+    border: 1px solid black;
+    padding: 7px;
+    color: rgb(255, 255, 255);
+}
+
+div#containermain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#container{
+    text-align: center;
+}
+
+div#container > div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div#container > div > button{
+    border: none;
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: 600;
+}
+
+div#container > div > button:hover{
+    cursor: pointer;
+    background-color: rgb(101, 32, 166);
+}
