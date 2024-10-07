@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+div#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#container_div{
+    text-align: center;
+    margin-top: 100px;
+    padding: 5px;
+    background-color: rgb(158, 229, 255);
+    box-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+    width: 50vh;
+}
+
+button#botaoCarregar{
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+div#nome_cerveja{
+    margin: auto;
+    background-color: blue;
+    color: chocolate;
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    border-radius: 10px;
+    opacity: 0.9;
+    transition: 1s;
+}
+
+#nome_cerveja.hide{
+    opacity: 0;
+}
+
+div#nome_cerveja > h1{
+    padding: 5px;
+    text-shadow: 2px 2px 1px white;
+}
