@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+div.marcas{
+    background-color: black;
+    color: aqua;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin-bottom: 7px;
+    width: fit-content;
+}
+
+div.bloco{
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+div#container_meuAmor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_bloco{
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    background-color: blueviolet;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 3px 3px 2px black;
+}
+
+div#container-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#container-conteudo{
+    text-align: center;
+    padding: 10px;
+    background-color: darkgray;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+}
