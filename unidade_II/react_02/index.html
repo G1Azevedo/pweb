@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React #1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+    </div>
+    <button id="button">
+        Carregar Bebidas....
+    </button>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone/babel.min.js" crossorigin></script>
+
+    <script type="text/babel">
+
+        //import TabelaBebidas from 'script.js'
+
+        let cervejas = [
+            {
+                name: "Guiness", 
+                alcohol: "10%",
+                style: "Sour Ale",
+                ibu: "33 IBU"            
+            }, 
+            {
+                name: "Desperados",
+                alcohol: "6%",
+                style: "Belgian Strong Ale",
+                ibu: "19 IBU"             
+            }, 
+            {
+                name: "Becks",
+                alcohol: "5%",
+                style: "European Amber Lager",
+                ibu: "41 IBU"             
+            },
+            {
+                name: "Weihenstephaner Hefeweissbier", 
+                alcohol: "8.9%",
+                style: "Sour Ale",
+                ibu: "17 IBU"            
+            }, 
+            {
+                name: "Storm King Stout",
+                alcohol: "9.1%",
+                style: "Belgian Strong Ale",
+                ibu: "54 IBU"             
+            }, 
+            {
+                name: "Stone IPA",
+                alcohol: "9.0%",
+                style: "European Amber Lager",
+                ibu: "51 IBU"             
+            },
+        ]
+
+        var colunas = ["Nome", "Álcool", "Estilo", "IBU"]
+
+        const Cabecalho = () => {
+            return (
+                <h1>Minha Tabela de Bebidas</h1>
+            )
+        }
+
+        const TabelaBebidasJson = () => {
+            return (
+                <table id="tabela2" border="1">
+                    <thead>
+                        <tr id="cabecalho">
+                            {colunas.map((col) => (
+                                <th>{col}</th>
+                            ))}
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        {cervejas.map((item, index) => (
+                            <tr>
+                                <td>{item.name}</td>
+                                <td>{item.alcohol}</td>
+                                <td>{item.style}</td>
+                                <td>{item.ibu}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            )
+        }
+
+        const FuncTeste = ({titulo}) => {
+            return (
+                <div>
+                    {titulo}
+                </div>
+            )
+
+        }
+
+        const TabelaBebidas = () => {
+            return (
+                <div id="app">
+                    <table id="tabela1" border="1">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Marca</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Havana</td>
+                                <td>Engenho Anísio Santiago</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            )
+        }
+
+        const carregarDiv = () => {
+            ReactDOM.render(
+                <div>
+                    <Cabecalho/>
+                    <TabelaBebidas/>
+                    <TabelaBebidasJson/>
+                </div>,
+                document.getElementById("app")
+            )
+        }
+        
+        document.getElementById('button').addEventListener('click', () => carregarDiv())
+    </script>
+</body>
+</html>
