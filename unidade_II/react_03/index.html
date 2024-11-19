@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React #2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone/babel.min.js" crossorigin></script>
+
+    <script type="text/babel">
+
+        class TabelaBebidas extends React.Component{
+            render(){
+                return (
+                    <div id="container_main">
+                        <div id="container_conteudo">
+                            <h1>{this.props.titulo}</h1>
+                            <table id="tabela" border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Marca</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Havana</td>
+                                        <td>Engenho Anísio Santiago</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>{this.props.mensagem}</p>
+                            <img src={this.props.url} alt="tricolor"></img>
+                        </div>
+                    </div> 
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <TabelaBebidas titulo="Tabela de Cana" url="https://logodetimes.com/times/sao-paulo/logo-sao-paulo-4096.png" mensagem="Escudo do maior do mundo"/>,
+            document.getElementById("app")
+        )
+    </script>
+
+</body>
+</html>
